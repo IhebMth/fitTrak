@@ -7,7 +7,7 @@ import Profile from '../pages/Profile';
 import ActivityDetails from '../pages/ActivityDetails';
 import Explore from '../pages/Explore';
 import RecordActivity from '../pages/RecordActivity';
-import NotFound from '../pages/NotFound';
+import NotFound from '../pages/Notfound';
 
 export const AppRoutes = () => {
   return (
