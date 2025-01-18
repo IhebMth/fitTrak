@@ -3,7 +3,7 @@ import { Ion, Viewer, Color, Cartesian3 } from 'cesium';
 import { HeartRateService } from '../services/HeartRateServices';
 import { Play, Square, Layers, Heart, Check } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import {
   Dialog,
   DialogContent,
