@@ -20,19 +20,28 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true,
+      proxy: {
+        '/api': {
+          target: 'https://api.cesium.com',
+          changeOrigin: true,
+          secure: false,
+        },
+        '/assets': {
+          target: 'https://assets.cesium.com',
+          changeOrigin: true,
+          secure: false,
+        }
+      },
+      optimizeDeps: {
+        exclude: ['cesium']
+      },
+      
   },
   build: {
     outDir: 'dist',
     assetsInlineLimit: 0,
-    rollupOptions: {
-      output: {
-        globals: {
-          cesium: 'Cesium', // Defines global variable for Cesium (for non-ES builds)
-        },
-      },
-    },
+    sourcemap: true,
+    chunkSizeWarningLimit: 3000,
   },
-  optimizeDeps: {
-    include: ['cesium'], // Pre-bundles Cesium for performance
-  },
+ 
 });
